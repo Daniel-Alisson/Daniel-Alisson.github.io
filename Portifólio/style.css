@@ -1,33 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Josefin Sans', serif;
 }
 
 body {
-    background-color: #000000;
+    background-color: #121212;
     color: #F6F6F6;
 }
 
 .cabecalho {
-    padding: 2% 14% 2% 14%;
+    position: fixed;
+    width: 100vw;
+    background-color: #1C1C1C;
+    padding: 1% 5% 1% 5%;
+    border-bottom: 2px solid #000000;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .cabecalho-nav {
     display: flex;
-    gap: 26rem;
+    align-items: center;
     /* 400 - 25rem */
 }
 
+.cabecalho-nav-inicio {
+    padding: 1% 10% 1% 5%;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1rem;
+    color: #4169E1;
+    border-right-style: solid;
+}
+
 .cabecalho-nav-links {
-    color: #22D4FD;
-    font-size: 1.5rem;
+    display: inline-flex;
+    padding: 1% 10.5% 1% 10%;
+    gap: 4rem;
+    color: white;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
 }
 
+#cabecalho-home:hover, #cabecalho-sobre:hover, #cabecalho-habilidades:hover, #cabecalho-projetos:hover, #cabecalho-contatos:hover {
+    color: #4169E1;
+    transition: 0.2s;
+    opacity: 0,7;
+}
+
+
+.cabecalho-trocarCor {
+    background-color: transparent;
+}
+
+.apresentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10% 5% 5% 20%;
+}
+
+.apresentacao-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.apresentacao-div-nome {
+    font-size: 50px;
+    font-weight: bold;
+    color: #4169E1;
+}
+
 .rodape {
-    background-color: #22D4FD;
+    background-color: #4169E1;
     color: #000000;
     text-align: center;
     font-size: 1.5rem;
