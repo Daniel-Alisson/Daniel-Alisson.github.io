@@ -160,10 +160,9 @@ html {
 }
 
 .habilidades-titulo {
-    margin: 0rem 32rem 4rem 11rem;
+    margin: 0rem 32rem 4rem 12rem;
     font-size: 80px;
     border-bottom: 5px solid #4169E1;
-    padding-left: 1rem;
 }
 
 #habilidades {
@@ -176,7 +175,6 @@ html {
     border-bottom: 2px solid #4169E1;
     padding-bottom: 3rem;
 }
-
 
 .habilidades-frontend, .habilidades-backend, .habilidades-frameworks {
     background-color: #1C1C1C;
@@ -208,6 +206,68 @@ html {
     padding: 1rem;
     border: 2px solid #000000;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.projetos-titulo {
+    margin: 0rem 63rem 4rem 12rem;
+    font-size: 80px;
+    border-bottom: 5px solid #4169E1;
+}
+
+#projetos {
+    margin: 0rem 10rem 1rem 10rem;
+    scroll-margin-top: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    border-bottom: 2px solid #4169E1;
+    padding-bottom: 3rem;
+}
+
+.projetos-div {
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    gap: 5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    text-align:center;
+}
+
+.projetos-div img {
+    width: 570px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.projetos-div-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 1rem;
+    border-left: 2px solid #4169E1;
+    max-width: 100%;
+    text-align: justify;
+}
+
+.projetos-div-conteudo h2 {
+    font-size: 36px;
+    text-align: center;
+    padding-right: 2rem;
+    padding-left: 5rem;
+}
+
+.projetos-div-conteudo p {
+    text-align: justify;
+    font-size: 16px;
+    margin: 0;
+    padding-left: 5rem;
+    padding-right: 2rem;
 }
 
 .rodape {
