@@ -159,6 +159,57 @@ html {
     border: 3px solid #4169E1;
 }
 
+.habilidades-titulo {
+    margin: 0rem 32rem 4rem 11rem;
+    font-size: 80px;
+    border-bottom: 5px solid #4169E1;
+    padding-left: 1rem;
+}
+
+#habilidades {
+    margin: 0rem 10rem 1rem 10rem;
+    scroll-margin-top: 270px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #4169E1;
+    padding-bottom: 3rem;
+}
+
+
+.habilidades-frontend, .habilidades-backend, .habilidades-frameworks {
+    background-color: #1C1C1C;
+    width: 300px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.habilidades-frontend-titulo, .habilidades-backend-titulo, .habilidades-frameworks-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 5px solid #4169E1;
+}
+
+.habilidades-frontend-titulo h2, .habilidades-backend-titulo h2, .habilidades-frameworks-titulo h2 {
+    margin-top: 0.5rem;
+    font-size: 30px;
+}
+
+.habilidades-frontend ul, .habilidades-backend ul, .habilidades-frameworks ul {
+    list-style: none;
+}
+
+.habilidades-frontend ul li, .habilidades-backend ul li, .habilidades-frameworks ul li {
+    padding: 1rem;
+    border: 2px solid #000000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
 .rodape {
     background-color: #4169E1;
     color: #000000;
