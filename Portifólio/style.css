@@ -270,11 +270,62 @@ html {
     padding-right: 2rem;
 }
 
+.projetos-div-tecnologias, .projetos-div-links {
+    padding-left: 4.5rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.projetos-div-tecnologias span {
+    margin-left: 0.5rem;
+    font-size: 14px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.projetos-div-links {
+    padding-top: 3rem;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.projetos-div-links a {
+    border: 2px solid #4169E1;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: white;
+}
+
+.projetos-div-links a:hover {
+    color: #4169E1;
+    transition: 0.2s;
+    opacity: 0.5;
+}
+
 .rodape {
     background-color: #4169E1;
     color: #000000;
+    max-width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 18px;
     padding: 2% 2%;
     font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.rodape img {
+    width: 18px;
+    height: auto;
+    margin-bottom: 0.3rem;
 }
