@@ -309,6 +309,77 @@ html {
     opacity: 0.5;
 }
 
+.contato-titulo {
+    margin: 0rem 63rem 4rem 12rem;
+    font-size: 80px;
+    border-bottom: 5px solid #4169E1;
+}
+
+#contato {
+    margin: 5rem 10rem 5rem 10rem;
+    scroll-margin-top: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.contato-div {
+    font-size: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    background-color: #1C1C1C;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contato-combo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}
+
+.contato-combo label {
+    font-size: 18px;
+    margin-bottom: 0.1rem;
+}
+
+.contato-combo input, .contato-combo textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 0.8rem;
+    background-color: white; /* PROCUAR UMA COR MASSA */
+    border-radius: 5px;
+}
+
+.contato-combo textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contato-botao {
+    font-size: 18px;
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4169E1;
+    color: white;
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    
+}
+
+.contato-botao:hover {
+    background-color: white;
+    color: #000000;
+    transition: 0.2s;
+    opacity: 0.7;
+}
+
 .rodape {
     background-color: #4169E1;
     color: #000000;
@@ -322,6 +393,8 @@ html {
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
+    border-top: 2px solid #000000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .rodape img {

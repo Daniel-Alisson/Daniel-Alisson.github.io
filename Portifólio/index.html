@@ -19,7 +19,7 @@
                 <a id="cabecalho-sobre" href="#sobre-mim">Sobre Mim</a>
                 <a id="cabecalho-habilidades" href="#habilidades">Habilidades Técnicas</a> 
                 <a id="cabecalho-projetos" href="#projetos">Projetos</a> 
-                <a id="cabecalho-contatos">Contatos</a>
+                <a id="cabecalho-contatos" href="#contato">Contato</a>
             </section>
             <button class="cabecalho-botao">Trocar de cor</button>
             </nav>
@@ -144,21 +144,23 @@
         
         <br><br><br>
 
-        <h2>Contato</h2>
-        <section>
-            <div>
-                <h3>Email</h3>
-                <input type="text">
+        <h2 class="contato-titulo">Contato</h2>
+        <section id="contato">
+            <div class="contato-div">
+                <div class="contato-combo">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Digite seu Email">
+                </div>
+                <div class="contato-combo">
+                    <label for="assunto">Assunto</label>
+                    <input id="assunto" type="text" placeholder="Digite o Assunto">
+                </div>
+                <div class="contato-combo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>    
+                </div>
+                <button class="contato-botao" type="submit">Enviar</button>
             </div>
-            <div>
-                <h3>Assunto</h3>
-                <input type="text">
-            </div>
-            <div>
-                <h3>Mensagem</h3>
-                <input type="text">
-            </div>
-            <button></button>
         </section>
     </main>
     <footer class="rodape">
