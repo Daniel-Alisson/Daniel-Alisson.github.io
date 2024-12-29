@@ -1,21 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
 
 :root {
-    --cor-background: #121212;
-    --cor-cabecalho-borda: #000000;
-    --cor-fundo-topicos: #1C1C1C;
-    --cor-detalhes: #4169E1;
-    --cor-fonte: #F6F6F6;
+    /*dark*/
+    --cor-dark-background: #121212;
+    --cor-dark-cabecalho-borda: #000000;
+    --cor-dark-fundo-topicos: #1C1C1C;
+    --cor-dark-detalhes: #4169E1;
+    --cor-dark-fonte: #F6F6F6;
 
+    /*light*/
+    --cor-light-background: #F6F6F6;
+    --cor-light-cabecalho-borda: #CCCCCC;
+    --cor-light-fundo-topicos: #FEFEFE;
+    --cor-light-detalhes: #4169E1;
+    --cor-light-fonte: #000000;
+
+    /*fontes*/
     --font-apresentacao-titulo: clamp(2.5rem, 7vw, 6.25rem);
     --font-apresentacao-subtitulo: clamp(1rem, 3vw, 1.875rem);
     --font-apresentacao-links: clamp(16px, 2vw, 20px);
-    --icone-apresentacao: clamp(16px, 2.3vw, 25px);
-    --imagem-sobre: clamp(200px, 30vw, 400px);
-    --imagem-projetos: clamp(200px, 50vw, 570px);
     --font-projetos-titulo: clamp(24px, 4vw, 36px);
     --font-projetos-botoes: clamp(16px, 2vw, 20px);
     --font-contato-label: clamp(12px, 2vw, 18px);
+    
+    /*imagens e icones*/
+    --icone-apresentacao: clamp(16px, 2.3vw, 25px);
+    --imagem-sobre: clamp(200px, 30vw, 400px);
+    --imagem-projetos: clamp(200px, 50vw, 570px);
 }
 
 * {
@@ -30,18 +41,21 @@ html {
 
 body {
     font-family: 'Josefin Sans', serif;
-    background-color: var(--cor-background);
-    color: var(--cor-fonte);
+    background-color: var(--cor-dark-background);
+    color: var(--cor-dark-fonte);
     min-height: 100vh;
+    transition: 0.5s;
 }
 
 .cabecalho {
     top: 0;
     width: 100%;
     position: fixed;
-    background-color: var(--cor-fundo-topicos);
-    border-bottom: 3px solid var(--cor-cabecalho-borda);
-    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
+    background-color: var(--cor-dark-fundo-topicos);
+    border-bottom: 3px solid var(--cor-dark-cabecalho-borda);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+    overflow: visible;
 }
 
 .cabecalho-nav {
@@ -66,18 +80,20 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
 }
 
 .cabecalho-nav-links a {
     margin: 1rem 1rem;
-    color: var(--cor-fonte);
+    color: var(--cor-dark-fonte);
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+    transition: 0.5s;
 }
 
-@media (max-width: 789px) { 
+@media (max-width: 800px) { 
     .cabecalho-nav {
         justify-content: center;
     }   
@@ -90,13 +106,13 @@ body {
 }
 
 .cabecalho-nav-links a:hover {
-    color: var(--cor-detalhes);
+    color: var(--cor-dark-detalhes);
     transition: 0.2s;
     opacity: 0.8;
 }
 
 .cabecalho-nav-span:hover {
-    color: var(--cor-detalhes);
+    color: var(--cor-dark-detalhes);
     transition: 0.2s;
     opacity: 0.8;
 }
@@ -113,7 +129,7 @@ body {
     padding-bottom: 15rem;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid var(--cor-detalhes);
+    border-bottom: 2px solid var(--cor-dark-detalhes);
 }
 
 .apresentacao-div {
@@ -155,6 +171,10 @@ body {
     gap: 30px;
 }
 
+.apresentacao-links a {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
 .apresentacao-links-github img, .apresentacao-links-linkedin img {
     width: var(--icone-apresentacao);
     vertical-align: middle;
@@ -166,11 +186,12 @@ body {
     gap: 8px;
     text-align: center;
     font-size: var(--font-apresentacao-links);
-    color: var(--cor-fonte);
+    color: var(--cor-dark-fonte);
     background-color: transparent;
-    border: 3px solid var(--cor-detalhes);
+    border: 3px solid var(--cor-dark-detalhes);
     border-radius: 8px;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 .apresentacao-links-github span, .apresentacao-links-linkedin span {
@@ -212,7 +233,7 @@ body {
     width: var(--imagem-sobre);
     border-radius: 25px;
     padding: 5px;
-    border: 3px solid #4169E1;
+    border: 3px solid var(--cor-dark-detalhes);
 }
 
 .sobre-div-texto {
@@ -222,7 +243,7 @@ body {
     flex-wrap: wrap;
 }
 
-@media (max-width: 789px) {
+@media (max-width: 800px) {
     .sobre-conteudo {
         display: flex;
         flex-direction: column;
@@ -243,7 +264,7 @@ body {
     border-bottom: 5px solid #4169E1;
 }
 
-@media (max-width: 789px) {
+@media (max-width: 800px) {
     .habilidades-titulo {
         display: flex;
         justify-content: center;
@@ -266,12 +287,13 @@ body {
 }
 
 .habilidades-frontend, .habilidades-backend, .habilidades-frameworks {
-    background-color: #1C1C1C;
+    background-color: var(--cor-dark-fundo-topicos);
     width: 300px;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
+    transition: 0.5s;
 }
 
 .habilidades-frontend-titulo, .habilidades-backend-titulo, .habilidades-frameworks-titulo {
@@ -295,11 +317,16 @@ body {
     padding: 1rem;
     border: 2px solid #000000;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
 }
 
 .habilidades-frontend ul li:hover, .habilidades-backend ul li:hover, .habilidades-frameworks ul li:hover {
-    background-color: var(--cor-detalhes);
-    border: 2px solid var(--cor-background);
+    background-color: var(--cor-dark-detalhes);
+    border: 2px solid var(--cor-dark-background);
     border-radius: 2px;
     transition: 0.5s;
     transform: scale(1.1);
@@ -313,7 +340,7 @@ body {
     border-bottom: 5px solid #4169E1;
 }
 
-@media (max-width: 789px) {
+@media (max-width: 800px) {
     .projetos-titulo {
         display: flex;
         justify-content: center;
@@ -335,7 +362,7 @@ body {
 }
 
 .projetos-div {
-    background-color: var(--cor-fundo-topicos);
+    background-color: var(--cor-dark-fundo-topicos);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -345,6 +372,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
+    transition: 0.5s;
 }
 
 .projetos-div img {
@@ -387,6 +415,10 @@ body {
     gap: 1rem;
 }
 
+.projetos-div-links {
+    margin-bottom: 1.5rem;
+}
+
 .projetos-div-tecnologias {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -417,7 +449,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     text-decoration: none;
-    color: white;
+    color: var(--cor-dark-fonte);
 }
 
 .projetos-div-links a:hover {
@@ -426,7 +458,7 @@ body {
     opacity: 0.5;
 }
 
-@media (max-width: 789px) {
+@media (max-width: 800px) {
     .projetos-div {
         flex-direction: column;
         text-align: center;
@@ -451,6 +483,7 @@ body {
     }
     .projetos-div-links {
         gap: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -462,9 +495,13 @@ body {
         font-size: 10px;
         padding: 0.2rem;
     }
+    .projetos-div-links {
+        gap: 0.1rem;
+    }
     .projetos-div-links a {
         padding: 0.5rem;
         font-size: 16px;
+        margin: 1rem;
     }
 }
 
@@ -475,7 +512,7 @@ body {
     border-bottom: 5px solid #4169E1;
 }
 
-@media (max-width: 789px) {
+@media (max-width: 800px) {
     .contato-titulo {
         display: flex;
         justify-content: center;
@@ -496,7 +533,7 @@ body {
 
 
 .contato-form {
-    background-color: #1C1C1C;
+    background-color: var(--cor-dark-fundo-topicos);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -523,7 +560,7 @@ body {
     margin-bottom: 0.8rem;
 }
 
-@media (max-width: 789px) { 
+@media (max-width: 800px) { 
     .contato-form input {
         height: 40px;
     }
@@ -552,7 +589,7 @@ body {
 
 .rodape {
     background-color: #4169E1;
-    color: #000000;
+    color: var(--cor-dark-cabecalho-borda);
     max-width: 100%;
     text-align: center;
     font-size: 18px;
@@ -583,10 +620,115 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--cor-detalhes);
+    background: var(--cor-dark-detalhes);
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #4c75f2;
     transition: 0.5s;
+}
+
+.trilho {
+    width: 50px;
+    height: 20px;
+    background-color: #4d4d4d;
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.trilho .indicador {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: scale(0.9);
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+}
+
+.trilho.light {
+    background-color: #c3c3c3;
+}
+
+.trilho.light .indicador {
+    left: 29px;
+    background-color: #fff;
+}
+
+.indicador:hover {
+    background-color: #4169E1;
+}
+
+body.light {
+    background-color: var(--cor-fonte);
+    color: var(--cor-light-fonte);
+}
+
+body.light .cabecalho {
+    background-color: var(--cor-light-fundo-topicos);
+    border-bottom: 3px solid var(--cor-light-cabecalho-borda);
+    /*colocar uma sombra mais tranquila dps*/
+}
+
+body.light .cabecalho-nav-links a {
+    color: var(--cor-light-fonte);
+}
+
+body.light .cabecalho-nav-links a:hover {
+    color: var(--cor-light-detalhes);
+}
+
+body.light .apresentacao-links-github, body.light .apresentacao-links-linkedin {
+    color: var(--cor-light-fonte);
+}
+
+body.light .habilidades-frontend, body.light .habilidades-backend, body.light .habilidades-frameworks {
+    background-color: var(--cor-light-fundo-topicos);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.light .habilidades-frontend ul li, body.light .habilidades-backend ul li, body.light .habilidades-frameworks ul li {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.light .projetos-div {
+    background-color: var(--cor-light-fundo-topicos);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.light .projetos-div-tecnologias span {
+    border: 2px solid var(--cor-dark-background);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.light .projetos-div-links a {
+    color: var(--cor-light-fonte);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.light .projetos-div-links a:hover {
+    color: #4169E1;
+    transition: 0.2s;
+}
+
+body.light .contato-form {
+    background-color: var(--cor-light-fundo-topicos);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.light .contato-form input, .contato-form textarea {
+    color: var(--cor-light-background);
+}
+
+body.light .contato-botao {
+    color: var(--cor-light-background);
+    background-color: var(--cor-light-fonte);
+}
+
+body.light .contato-botao:hover {
+    background-color: var(--cor-light-detalhes);
+    color: var(--cor-dark-fonte);
 }
