@@ -18,6 +18,7 @@
     /*cores gradiente*/
     --cor-gradiente-nome1: #1E47C2;
     --cor-gradiente-nome2: #95ABEE;
+    --cor-antigo: #4169E1;
 
     /*barra de rolagem e trilho*/
     --cor-scroll-track: #1E1E1E;
@@ -180,19 +181,20 @@ body {
 .apresentacao-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .apresentacao-links a {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.apresentacao-links-github img, .apresentacao-links-linkedin img {
+.apresentacao-links-github img, .apresentacao-links-linkedin img, .apresentacao-links-curriculo img {
     width: var(--icone-apresentacao);
     vertical-align: middle;
 }
 
-.apresentacao-links-github, .apresentacao-links-linkedin {
+.apresentacao-links-github, .apresentacao-links-linkedin, .apresentacao-links-curriculo {
     display: inline-flex;
     padding: 8px;
     gap: 8px;
@@ -206,7 +208,7 @@ body {
     transition: 0.5s;
 }
 
-.apresentacao-links-github span, .apresentacao-links-linkedin span {
+.apresentacao-links-github span, .apresentacao-links-linkedin span, .apresentacao-links-curriculo span {
     display: block;
     margin-top: 0.3rem;
 }
@@ -537,7 +539,7 @@ ul li:last-child {
 
 #contato {
     margin: 1rem 2rem 1rem 2rem;
-    scroll-margin-top: 230px;
+    scroll-margin-top: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -609,7 +611,7 @@ ul li:last-child {
     padding: 2% 2%;
     font-weight: 700;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-top: 2px solid var(--cor-dark-cabecalho-borda);
@@ -621,6 +623,19 @@ ul li:last-child {
     vertical-align: middle;
     margin-bottom: 0.3rem;
     margin-right: 0.2rem;
+}
+
+.rodape-links {
+    margin-bottom: 0.3rem;
+}
+
+.rodape-links a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.rodape-links a:last-child img {
+    margin-right: 0;
 }
 
 ::-webkit-scrollbar {
@@ -694,8 +709,20 @@ body.light .cabecalho-nav-links a:hover {
     color: var(--cor-light-detalhes);
 }
 
-body.light .apresentacao-links-github, body.light .apresentacao-links-linkedin {
+body.light .apresentacao-links-github, body.light .apresentacao-links-linkedin, body.light .apresentacao-links-curriculo {
     color: var(--cor-light-fonte);
+}
+
+body.light .apresentacao-links-github img {
+    content: url(/imagens/github.png);
+}
+
+body.light .apresentacao-links-linkedin img {
+    content: url(/imagens/linkedin.png);
+}
+
+body.light .apresentacao-links-curriculo img {
+    content: url(/imagens/download.png);
 }
 
 body.light .apresentacao-links a {
@@ -733,6 +760,7 @@ body.light .projetos-div-links a {
 body.light .projetos-div-links a:hover {
     color: var(--cor-light-detalhes);
     transition: 0.2s;
+    opacity: 0.4;
 }
 
 body.light .contato-form {
@@ -740,8 +768,8 @@ body.light .contato-form {
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
 }
 
-body.light .contato-form input, .contato-form textarea {
-    color: var(--cor-light-background);
+body.light .contato-form input, body.light .contato-form textarea {
+    color: var(--cor-light-fonte);
 }
 
 body.light .contato-botao {
