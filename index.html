@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/src/scripts/reveal.js" defer></script>
 </head>
 <body>
     <header class="cabecalho">
@@ -24,6 +26,7 @@
             </nav>
         </nav>
     </header>
+
     <main>
         <section id="apresentacao">
             <div class="apresentacao-div">
@@ -88,7 +91,7 @@
 
         <h2 class="projetos-titulo">Projetos</h2>
         <section id="projetos">
-            <div class="projetos-div">
+            <div class="projetos-div efeito-projeto1">
                 <img src="/src/assets/images/projetos/biblioteca-virtual.png" alt="Sistema de Biblioteca Virtual">
                 <div class="projetos-div-conteudo">
                     <h2>Biblioteca Virtual</h2>
@@ -103,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <div class="projetos-div">
+            <div class="projetos-div efeito-projeto2">
                 <img src="/src/assets/images/projetos/trackbug.png" alt="Sistema de Emprestimos">
                 <div class="projetos-div-conteudo">
                     <h2>TrackBug</h2>
@@ -118,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            <div class="projetos-div">
+            <div class="projetos-div efeito-projeto3">
                 <img src="/src/assets/images/projetos/petshop.png" alt="Site de Petshop">
                 <div class="projetos-div-conteudo">
                     <h2>Petshop</h2>
@@ -134,6 +137,24 @@
                     </div>
                 </div>
             </div>
+            <!--    BASE
+            <div class="projetos-div efeito-projeto4">
+                <img src="" alt="">
+                <div class="projetos-div-conteudo">
+                    <h2></h2>
+                    <p></p>
+                    <div class="projetos-div-tecnologias">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="projetos-div-links">
+                        <a target="_blank" href="">Github</a>
+                        <a href="">Previa</a>
+                    </div>
+                </div>
+            </div>
+            -->
         </section>
 
         <h2 class="contato-titulo">Contato</h2> 
@@ -151,6 +172,7 @@
             </form>
         </section>
     </main>
+
     <footer class="rodape">
         <div class="rodape-links">
             <a target="_blank" href="https://github.com/Daniel-Alisson"><img src="/src/assets/images/github.png" alt="icone-github"></a>
@@ -160,6 +182,6 @@
         </div>
         <p><img class="rodape-img" src="/src/assets/images/copyright.png" alt="simbolo de Copyright">2024 - Todos os direitos reservados - Desenvolvido por Daniel Alisson</p>
     </footer>
-    <script src="/src/script.js"></script>
+    <script src="/src/scripts/script.js"></script>
 </body>
 </html>
