@@ -810,7 +810,7 @@ body.light .contato-botao:hover {
     color: var(--cor-dark-fonte);
 }
 
-.apresentacao-links, .apresentacao-div-nome, .apresentacao-div-textox, .sobre-titulo, .sobre-imagem, .sobre-div-texto, .habilidades-titulo, .habilidades-backend, .habilidades-frameworks,
+.apresentacao-div-nome, .apresentacao-div-texto, .apresentacao-links, .sobre-titulo, .sobre-imagem, .sobre-div-texto, .habilidades-titulo, .habilidades-backend, .habilidades-frameworks,
 .habilidades-frontend, .projetos-titulo, .efeito-projeto1, .efeito-projeto2, .efeito-projeto3, .contato-titulo, .contato-form {
     visibility: hidden;
 }

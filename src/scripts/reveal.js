@@ -13,7 +13,7 @@ revelar.reveal('.apresentacao-div-texto',{
     distance: '100px'
 })
 
-revelar.reveal('.efeito-apresentacao-links',{
+revelar.reveal('.apresentacao-links',{
     duration: 1000,
     distance: '100px',
     delay: 500,
@@ -102,8 +102,7 @@ revelar.reveal('.efeito-projeto3',{
     easing: 'ease-out'
 })
 
-// TOPICO CONTATO
-
+// CONTATO
 revelar.reveal('.contato-titulo',{
     duration: 2000,
     distance: '70px',
