@@ -182,6 +182,16 @@
         </div>
         <p><img class="rodape-img" src="/src/assets/images/copyright.png" alt="simbolo de Copyright">2024 - Todos os direitos reservados - Desenvolvido por Daniel Alisson</p>
     </footer>
+
     <script src="/src/scripts/script.js"></script>
+    <script src="/src/scripts/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".sobre-imagem"), {
+            max: 10,
+            speed: 200,
+            transition: true,
+            easing: "ease"
+        });
+    </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+// BOTAO DE TROCAR TEMA
 let trilho = document.getElementById('trilho');
 let body = document.querySelector('body');
 
