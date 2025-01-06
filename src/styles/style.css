@@ -65,7 +65,6 @@ body {
     color: var(--cor-dark-fonte);
     min-height: 100vh;
     transition: 0.5s;
-    overflow-x: hidden;
 }
 
 .container {
@@ -223,9 +222,8 @@ body.light .bolhas span:nth-of-type(even) {
 }
 
 #apresentacao {
-    margin: 0rem 2rem 0rem 2rem;
+    margin: 15rem 2rem 5rem 2rem;
     scroll-margin-top: 240px;
-    margin-top: 15rem;
     display: flex;
     justify-content: center;
     height: 65vh;
@@ -309,27 +307,39 @@ body.light .bolhas span:nth-of-type(even) {
     transform: scale(1.1);
 }
 
-#sobre {
-    margin: 5rem 2rem 5rem 2rem;
-    scroll-margin-top: 100px;
-    border-bottom: 2px solid var(--cor-dark-detalhes);
-    gap: 2rem;
-    height: 100vh;
+@media (max-width: 614px) {
+    #sobre {
+        scroll-margin-top: 250px;
+    }
+    #habilidades {
+        scroll-margin-top: 500px;
+    }
 }
 
 .sobre-titulo {
     display: inline-block;
-    margin: 1rem 0rem 1rem 2rem;
+    margin: 1rem 0rem 0rem 4rem;
     font-size: var(--font-titulo);
     border-bottom: 5px solid var(--cor-dark-detalhes);
 }
 
+#sobre {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem 5rem 2rem;
+    scroll-margin-top: 250px;
+    border-bottom: 2px solid var(--cor-dark-detalhes);
+    height: 65vh;
+}
+
 .sobre-conteudo {
     margin: 2rem 2rem;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
-    gap: 2rem;
+    flex-direction: row;
+    text-align: justify;
     align-items:center;
+    gap: 5rem;
 }
 
 .sobre-imagem {
@@ -383,29 +393,17 @@ body.light .bolhas span:nth-of-type(even) {
     margin: 3rem 2rem 5rem 2rem;
     scroll-margin-top: 250px;
     display: flex;
-    justify-content: center;
-    gap: 4rem;
+    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 2rem;
     border-bottom: 2px solid var(--cor-dark-detalhes);
     padding-bottom: 3rem;
-    height: 65vh;
-}
-
-@media (max-width: 1242px) {
-    #habilidades {
-        height: 100vh;
-    }
-}
-
-@media (max-width: 828px) {
-    #habilidades {
-        height: 220vh;
-    }
 }
 
 .habilidades-frontend, .habilidades-backend, .habilidades-frameworks {
     background-color: var(--cor-dark-fundo-topicos);
     width: 350px;
+    height: 450px;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
@@ -488,7 +486,7 @@ ul li:last-child {
     justify-content: center;
     gap: 4rem;
     border-bottom: 2px solid var(--cor-dark-detalhes);
-    height: 180vh;
+    padding-bottom: 3rem;
 }
 
 .projetos-div {
@@ -589,9 +587,6 @@ ul li:last-child {
 }
 
 @media (max-width: 878px) {
-    #projetos {
-        height: 280vh;
-    }
     .projetos-div {
         flex-direction: column;
         text-align: center;
