@@ -8,7 +8,7 @@ trilho.addEventListener("click", () => {
 });
 
 // CÓDIGO PARA CRIAR BOLHAS ALEATÓRIAS
-const numeroBolhas = 50;
+const numeroBolhas = 0;
 const bolhas = document.querySelector(".bolhas");
 
 for (let i = 1; i <= numeroBolhas * 10; i++) {
