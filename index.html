@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/src/styles/style.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/src/scripts/reveal.js" defer></script>
+    <script defer src="/src/scripts/form.js"></script>
   </head>
   <body>
     <div class="container">
@@ -19,10 +20,11 @@
       <header class="cabecalho">
         <nav class="cabecalho-nav">
           <section class="cabecalho-nav-inicio">
-            <h2 class="cabecalho-nav-titulo">&lt;DA/&gt;</h2>
+            <h2 class="cabecalho-nav-titulo">
+              <a href="#apresentacao">&lt;DA/&gt;</a>
+            </h2>
           </section>
           <nav class="cabecalho-nav-links">
-            <a id="cabecalho-home" href="#apresentacao">Home</a>
             <a id="cabecalho-sobre" href="#sobre">Sobre</a>
             <a id="cabecalho-habilidades" href="#habilidades"
               >Habilidades Técnicas</a
@@ -39,7 +41,7 @@
         <section id="apresentacao">
           <div class="apresentacao-div">
             <h2 class="apresentacao-div-nome">Daniel Alisson</h2>
-            <h3 class="apresentacao-div-texto">Desenvolvedor Back-End</h3>
+            <h3 class="apresentacao-div-texto">Desenvolvedor Full Stack</h3>
             <div class="apresentacao-links">
               <a
                 class="apresentacao-links-github"
@@ -62,7 +64,7 @@
               <a
                 class="apresentacao-links-curriculo"
                 target="_blank"
-                href="/src/assets/Curriculo - Daniel Santos.pdf"
+                href="/src/assets/Curriculo - Daniel Alisson.pdf"
                 download="Currículo - Daniel Alisson.pdf"
                 ><img
                   src="/src/assets/images/download-escuro.jpg"
@@ -219,7 +221,11 @@
                   href="https://github.com/Daniel-Alisson/Projeto-BibliotecaVirtual"
                   >Github</a
                 >
-                <a href="">Previa</a>
+                <a
+                  target="_blank"
+                  href="https://github.com/Daniel-Alisson/Projeto-BibliotecaVirtual/releases/tag/V0.2.3"
+                  >Download</a
+                >
               </div>
             </div>
           </div>
@@ -247,34 +253,41 @@
                   href="https://github.com/Daniel-Alisson/TrackBug"
                   >Github</a
                 >
-                <a href="">Previa</a>
+                <a
+                  target="_blank"
+                  href="https://github.com/Daniel-Alisson/TrackBug/releases/tag/V0.1.5"
+                  >Download</a
+                >
               </div>
             </div>
           </div>
           <div class="projetos-div efeito-projeto3">
             <img
-              src="/src/assets/images/projetos/petshop.png"
-              alt="Site de Petshop"
+              src="/src/assets/images/projetos/energia-solar.png"
+              alt="Site de Energia Solar"
             />
             <div class="projetos-div-conteudo">
-              <h2>Petshop</h2>
+              <h2>Site de Energia Solar</h2>
               <p>
-                Site que oferece uma lista de produtos para animais de
-                estimação. Tem a opção de navegar e adicionar os produtos no
-                carrinho e visualizar a listagem dos pedidos selecionados.
+                Site ainda está em desenvolvimento. Voltado para uma empresa de
+                Energia Solar, apresentando uma plaforma para clientes e
+                funcionários. Contendo uma visão geral para informações sobre a
+                empresa, serviços, usinas instaladas e orçamentos. Além disso
+                uma área para funcionários, onde será possivel gerenciar e
+                monitorar as usinas.
               </p>
               <div class="projetos-div-tecnologias">
                 <span>HTML</span>
                 <span>CSS</span>
-                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>Angular</span>
               </div>
               <div class="projetos-div-links">
                 <a
                   target="_blank"
-                  href="https://github.com/Daniel-Alisson/TDE-PETSHOP"
+                  href="https://github.com/Daniel-Alisson/Projeto-EnergiaSolar"
                   >Github</a
                 >
-                <a href="">Previa</a>
               </div>
             </div>
           </div>
@@ -291,7 +304,7 @@
                         </div>
                         <div class="projetos-div-links">
                             <a target="_blank" href="">Github</a>
-                            <a href="">Previa</a>
+                            <a href="">Download</a>
                         </div>
                     </div>
                 </div>
@@ -302,23 +315,19 @@
         <section id="contato">
           <form
             class="contato-form"
-            action="https://formsubmit.co/danielalisson77@gmail.com"
+            action="https://formsubmit.co/ajax/danielalisson77@gmail.com"
             method="POST"
+            data-form
           >
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" required />
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
-            <label for="message">Mensagem</label>
-            <textarea name="message" id="message" required></textarea>
-            <input type="hidden" name="_captcha" value="false" />
-            <input
-              class="contato"
-              type="hidden"
-              name="_next"
-              value="http://127.0.0.1:5500/index.html#contato"
-            />
-            <button class="contato-botao" type="submit">Enviar</button>
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" required></textarea>
+            <button class="contato-botao" type="submit" data-button>
+              Enviar
+            </button>
           </form>
         </section>
       </main>
@@ -345,7 +354,7 @@
             class="rodape-img"
             src="/src/assets/images/copyright.png"
             alt="simbolo de Copyright"
-          />2024 - Todos os direitos reservados - Desenvolvido por Daniel
+          />2025 - Todos os direitos reservados - Desenvolvido por Daniel
           Alisson
         </p>
       </footer>
