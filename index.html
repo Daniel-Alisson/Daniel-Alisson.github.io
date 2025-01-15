@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/src/styles/style.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/src/scripts/reveal.js" defer></script>
+    <script defer src="/src/scripts/form.js"></script>
   </head>
   <body>
     <div class="container">
@@ -40,7 +41,7 @@
         <section id="apresentacao">
           <div class="apresentacao-div">
             <h2 class="apresentacao-div-nome">Daniel Alisson</h2>
-            <h3 class="apresentacao-div-texto">Desenvolvedor Back-End</h3>
+            <h3 class="apresentacao-div-texto">Desenvolvedor Full Stack</h3>
             <div class="apresentacao-links">
               <a
                 class="apresentacao-links-github"
@@ -303,7 +304,7 @@
                         </div>
                         <div class="projetos-div-links">
                             <a target="_blank" href="">Github</a>
-                            <a href="">Previa</a>
+                            <a href="">Download</a>
                         </div>
                     </div>
                 </div>
@@ -314,23 +315,19 @@
         <section id="contato">
           <form
             class="contato-form"
-            action="https://formsubmit.co/danielalisson77@gmail.com"
+            action="https://formsubmit.co/ajax/danielalisson77@gmail.com"
             method="POST"
+            data-form
           >
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" required />
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
-            <label for="message">Mensagem</label>
-            <textarea name="message" id="message" required></textarea>
-            <input type="hidden" name="_captcha" value="false" />
-            <input
-              class="contato"
-              type="hidden"
-              name="_next"
-              value="http://127.0.0.1:5500/index.html#contato"
-            />
-            <button class="contato-botao" type="submit">Enviar</button>
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" required></textarea>
+            <button class="contato-botao" type="submit" data-button>
+              Enviar
+            </button>
           </form>
         </section>
       </main>
@@ -357,7 +354,7 @@
             class="rodape-img"
             src="/src/assets/images/copyright.png"
             alt="simbolo de Copyright"
-          />2024 - Todos os direitos reservados - Desenvolvido por Daniel
+          />2025 - Todos os direitos reservados - Desenvolvido por Daniel
           Alisson
         </p>
       </footer>

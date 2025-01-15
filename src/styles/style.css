@@ -1051,3 +1051,12 @@ body.light::-webkit-scrollbar-track {
 body.light::-webkit-scrollbar-thumb {
   background: var(--cor-dark-detalhes);
 }
+
+.success,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 15px;
+}
