@@ -9,10 +9,10 @@
   --cor-dark-fonte: #f6f6f6;
 
   /*tema light*/
-  --cor-light-background: #ffffff;
+  --cor-light-background: #FAFDFF;
   --cor-light-cabecalho-borda: #cccccc;
   --cor-light-fundo-topicos: #e1e1e1;
-  --cor-light-detalhes: #18338c;
+  --cor-light-detalhes: #7290E9;
   --cor-light-fonte: #0e0e0e;
 
   /*cores gradiente*/
@@ -125,7 +125,11 @@ body.light .bolhas span:nth-of-type(even) {
 }
 
 strong {
-  color: #18338c;
+  color: var(--cor-dark-detalhes);
+}
+
+body.light strong {
+  color: var(--cor-light-detalhes);
 }
 
 #apresentacao,
