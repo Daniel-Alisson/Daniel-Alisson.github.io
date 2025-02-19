@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap");
 
 :root {
-  /*dark*/
+  /*tema dark*/
   --cor-dark-background: #121212;
   --cor-dark-cabecalho-borda: #000000;
   --cor-dark-fundo-topicos: #1c1c1c;
   --cor-dark-detalhes: #1e47c2;
   --cor-dark-fonte: #f6f6f6;
 
-  /*light*/
+  /*tema light*/
   --cor-light-background: #ffffff;
   --cor-light-cabecalho-borda: #cccccc;
   --cor-light-fundo-topicos: #e1e1e1;
@@ -76,42 +76,36 @@ body {
 }
 
 .bolhas {
-  position: absolute;
-  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .bolhas span {
+  position: absolute;
   width: 30px;
   height: 30px;
   background: #1e47c2;
   margin: 0 2px;
   border-radius: 50%;
   box-shadow: 0 0 0 10px #1e47c255, 0 0 20px #1e47c2, 0 0 50px #1e47c2;
-  animation: animar calc(450s / var(--i)) linear infinite;
+  animation: animar calc(100s / var(--i)) linear infinite;
   z-index: -1;
 }
 
-@keyframes animar {
+@keyframes animar { 
   0% {
-    transform: translateY(-5vh) scale(1);
-    opacity: 0.6;
+    transform: translateY(-10vh) scale(0.1);
+    opacity: 0;
   }
   100% {
-    transform: translateY(650vh) scale(0.5);
-    opacity: 0.2;
-  }
-}
-
-@media (max-width: 1000px) {
-  @keyframes animar {
-    0% {
-      transform: translateY(-5vh) scale(1);
-      opacity: 0.6;
-    }
-    100% {
-      transform: translateY(750vh) scale(0.5);
-      opacity: 0.2;
-    }
+    transform: translateY(110vh) scale(0.5);
+    opacity: 0.5;
   }
 }
 
