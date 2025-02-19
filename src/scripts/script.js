@@ -7,12 +7,19 @@ trilho.addEventListener("click", () => {
   body.classList.toggle("light");
 });
 
-// CÓDIGO PARA CRIAR BOLHAS ALEATÓRIAS
-const numeroBolhas = 0;
+// SCRIPT PARA CRIAR AS BOLHAS DE FUNDO
+const numeroBolhas = 50;
 const bolhas = document.querySelector(".bolhas");
 
-for (let i = 1; i <= numeroBolhas * 10; i++) {
+for (let i = 1; i <= numeroBolhas; i++) {
   const span = document.createElement("span");
+
+  const posX = Math.random() * 100;
+  const posY = Math.random() * 100;
+
+  span.style.left = `${posX}vw`;
+  span.style.top = `${posY}vh`;
+
   span.style.setProperty("--i", Math.floor(Math.random() * 50) + 10);
   bolhas.appendChild(span);
 }
