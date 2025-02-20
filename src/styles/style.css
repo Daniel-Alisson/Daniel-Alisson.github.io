@@ -65,7 +65,7 @@ body {
   background-color: var(--cor-dark-background);
   color: var(--cor-dark-fonte);
   min-height: 100vh;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .container {
@@ -182,7 +182,7 @@ body.light strong {
   background-color: var(--cor-dark-fundo-topicos);
   border-bottom: 1px solid var(--cor-dark-cabecalho-borda);
   box-shadow: 0 8px 1rem rgba(255, 255, 255, 0.3);
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .cabecalho-nav {
@@ -199,14 +199,14 @@ body.light strong {
   margin: 2rem 1rem 2rem 5rem;
   font-size: 1.25rem;
   font-weight: bold;
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
 .cabecalho-nav-inicio a {
   position: relative;
   color: var(--cor-dark-fonte);
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .cabecalho-nav-links {
@@ -225,7 +225,7 @@ body.light strong {
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
   position: relative;
 }
 
@@ -266,13 +266,13 @@ body.light strong {
 
 .cabecalho-nav-links a:hover {
   color: var(--cor-dark-detalhes);
-  transition: 0.2s;
+  transition: 0.5s ease-in-out;
   opacity: 0.8;
 }
 
 .cabecalho-nav-titulo a:hover {
   color: var(--cor-dark-detalhes);
-  transition: 0.2s;
+  transition: 0.5s ease-in-out;
   opacity: 0.8;
 }
 
@@ -355,7 +355,7 @@ body.light strong {
   border: 3px solid var(--cor-dark-detalhes);
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .apresentacao-links-github span,
@@ -367,20 +367,11 @@ body.light strong {
 
 .apresentacao-links a:hover {
   color: var(--cor-dark-detalhes);
-  transition: 0.2s;
+  transition: 0.15s ease-out;
   opacity: 0.9;
   transform: scale(1.1);
 }
-/*
-@media (max-width: 614px) {
-  #sobre {
-    scroll-margin-top: 250px;
-  }
-  #habilidades {
-    scroll-margin-top: 500px;
-  }
-}
-  */
+
 
 .sobre-titulo {
   display: inline-block;
@@ -480,7 +471,7 @@ body.light strong {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   text-align: center;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
   position: relative;
 }
 
@@ -518,7 +509,7 @@ body.light strong {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
   gap: 0.3rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 .habilidades-frontend ul li span,
@@ -586,7 +577,7 @@ ul li:last-child {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   text-align: center;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .projetos-div img {
@@ -600,7 +591,7 @@ ul li:last-child {
   transform: scale(1.1);
 }
 
-.projetos-div-conteudo {
+.projetos-div-conteudo efeito-projeto1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -633,6 +624,7 @@ ul li:last-child {
   flex-direction: row;
   justify-content: left;
   gap: 1rem;
+  margin: 10px 1rem;
 }
 
 .projetos-div-links {
@@ -670,11 +662,12 @@ ul li:last-child {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   color: var(--cor-dark-fonte);
-  transition: 0.2s ease;
+  transition: 0.25s ease-out;
 }
 
 .projetos-div-links a:hover {
   color: var(--cor-dark-detalhes);
+  transform: scale(1.1);
   opacity: 0.8;
 }
 
@@ -697,10 +690,12 @@ ul li:last-child {
   }
   .projetos-div-tecnologias,
   .projetos-div-links {
-    margin: 0;
     flex-direction: row;
     align-items: center;
     padding: 0;
+  }
+  .projetos-div-tecnologias {
+    margin: 1rem 0px;
   }
   .projetos-div-links {
     gap: 1rem;
@@ -756,6 +751,7 @@ ul li:last-child {
 }
 
 #contato {
+  position: relative;
   margin: 1rem 2rem 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -775,6 +771,7 @@ ul li:last-child {
   font-size: 16px;
   border-radius: 8px;
   margin: 1;
+  transition: 0.5s ease-in-out;
 }
 
 .contato-form label {
