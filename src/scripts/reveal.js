@@ -34,7 +34,7 @@ revelar.reveal(".sobre-div-texto", {
   distance: "70px",
   origin: "right",
   easing: "ease-in-out",
-  reset: false,
+  reset: false
 });
 
 // HABILIDADES
