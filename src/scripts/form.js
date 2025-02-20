@@ -1,3 +1,4 @@
+// script para o forms do contato
 class FormSubmit {
   constructor(config) {
     this.config = config;

@@ -1,25 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap");
-
+/*Padrão é DARK*/
 :root {
   /*tema dark*/
   --cor-dark-background: #121212;
   --cor-dark-cabecalho-borda: #000000;
-  --cor-dark-fundo-topicos: #1c1c1c;
+  --cor-dark-cabecalho-background: #1c1c1c;
+  --cor-dark-topicos: #1c1c1c;
   --cor-dark-detalhes: #1e47c2;
-  --cor-dark-fonte: #f6f6f6;
+  --cor-dark-footer-background: #1e47c2;
+  --cor-dark-footer-borda: #214ed4;
+  --cor-dark-footer-font: #121212;
+  --cor-dark-font: #f6f6f6;
 
   /*tema light*/
   --cor-light-background: #FAFDFF;
   --cor-light-cabecalho-borda: #cccccc;
-  --cor-light-fundo-topicos: #e1e1e1;
+  --cor-light-cabecalho-background: #e1e1e1;
+  --cor-light-topicos: #e1e1e1;
   --cor-light-detalhes: #7290E9;
-  --cor-light-fonte: #0e0e0e;
+  --cor-light-footer-background: #e1e1e1;
+  --cor-light-footer-borda: #e1e1e1;
+  --cor-light-footer-font: #e1e1e1;
+  --cor-light-font: #0e0e0e;
 
   /*cores gradiente*/
   --cor-gradiente-nome1: #1e47c2;
   --cor-gradiente-nome2: #95abee;
   --cor-antigo: #4169e1;
-  --cor-footer-borda: #214ed4;
 
   /*barra de rolagem e trilho*/
   --cor-scroll-dark-track: #1e1e1e;
@@ -63,7 +70,7 @@ html {
 body {
   font-family: "Josefin Sans", serif;
   background-color: var(--cor-dark-background);
-  color: var(--cor-dark-fonte);
+  color: var(--cor-dark-font);
   min-height: 100vh;
   transition: 0.5s ease-in-out;
 }
@@ -179,7 +186,7 @@ body.light strong {
   width: 100%;
   position: fixed;
   z-index: 1000;
-  background-color: var(--cor-dark-fundo-topicos);
+  background-color: var(--cor-dark-cabecalho-background);
   border-bottom: 1px solid var(--cor-dark-cabecalho-borda);
   box-shadow: 0 8px 1rem rgba(255, 255, 255, 0.3);
   transition: 0.5s ease-in-out;
@@ -204,7 +211,7 @@ body.light strong {
 
 .cabecalho-nav-inicio a {
   position: relative;
-  color: var(--cor-dark-fonte);
+  color: var(--cor-dark-font);
   text-decoration: none;
   transition: 0.5s ease-in-out;
 }
@@ -220,7 +227,7 @@ body.light strong {
 
 .cabecalho-nav-links a {
   margin: 1rem 1rem;
-  color: var(--cor-dark-fonte);
+  color: var(--cor-dark-font);
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
@@ -350,7 +357,7 @@ body.light strong {
   gap: 8px;
   text-align: center;
   font-size: var(--font-apresentacao-links);
-  color: var(--cor-dark-fonte);
+  color: var(--cor-dark-font);
   background-color: transparent;
   border: 3px solid var(--cor-dark-detalhes);
   border-radius: 8px;
@@ -464,7 +471,7 @@ body.light strong {
 .habilidades-frontend,
 .habilidades-backend,
 .habilidades-frameworks {
-  background-color: var(--cor-dark-fundo-topicos);
+  background-color: var(--cor-dark-topicos);
   width: 350px;
   height: 450px;
   padding: 2rem;
@@ -567,7 +574,7 @@ ul li:last-child {
 }
 
 .projetos-div {
-  background-color: var(--cor-dark-fundo-topicos);
+  background-color: var(--cor-dark-topicos);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -638,7 +645,7 @@ ul li:last-child {
 
 .projetos-div-tecnologias span {
   font-size: 14px;
-  border: 2px solid var(--cor-dark-fonte);
+  border: 2px solid var(--cor-dark-font);
   border-radius: 5px;
   padding: 0.5rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
@@ -661,7 +668,7 @@ ul li:last-child {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   text-decoration: none;
-  color: var(--cor-dark-fonte);
+  color: var(--cor-dark-font);
   transition: 0.25s ease-out;
 }
 
@@ -760,7 +767,7 @@ ul li:last-child {
 }
 
 .contato-form {
-  background-color: var(--cor-dark-fundo-topicos);
+  background-color: var(--cor-dark-topicos);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -784,7 +791,7 @@ ul li:last-child {
   width: 100%;
   font-size: 16px;
   padding: 0.8rem;
-  background-color: var(--cor-dark-fonte);
+  background-color: var(--cor-dark-font);
   border-radius: 5px;
   margin-bottom: 0.8rem;
 }
@@ -812,13 +819,13 @@ ul li:last-child {
 
 .contato-botao:hover {
   background-color: var(--cor-dark-detalhes);
-  color: var(--cor-dark-fonte);
+  color: var(--cor-dark-font);
   opacity: 0.7;
 }
 
 .rodape {
-  background-color: var(--cor-dark-detalhes);
-  color: var(--cor-dark-cabecalho-borda);
+  background-color: var(--cor-dark-footer-background);
+  color: var(--cor-dark-footer-font);
   max-width: 100%;
   width: 100%;
   text-align: center;
@@ -829,7 +836,7 @@ ul li:last-child {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid var(--cor-footer-borda);
+  border-top: 2px solid var(--cor-dark-footer-borda);
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.4);
   padding-top: 1.5rem;
 }
@@ -860,7 +867,7 @@ ul li:last-child {
 }
 
 .rodape-redes-sociais a {
-  color: var(--font-rodape);
+  color: var(--cor-dark-footer-font);
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 30px;
@@ -959,22 +966,22 @@ body.light .indicador {
 }
 
 body.light .indicador:hover {
-  background-color: var(--cor-dark-detalhes);
+  background-color: var(--cor-light-detalhes);
 }
 
 body.light {
   background-color: var(--cor-light-background);
-  color: var(--cor-light-fonte);
+  color: var(--cor-light-font);
 }
 
 body.light .cabecalho {
-  background-color: var(--cor-light-fundo-topicos);
+  background-color: var(--cor-light-cabecalho-background);
   border-bottom: 3px solid var(--cor-light-cabecalho-borda);
   box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 
 body.light .cabecalho-nav-inicio a {
-  color: var(--cor-light-fonte);
+  color: var(--cor-light-font);
 }
 
 body.light .cabecalho-nav-inicio a:hover {
@@ -982,7 +989,7 @@ body.light .cabecalho-nav-inicio a:hover {
 }
 
 body.light .cabecalho-nav-links a {
-  color: var(--cor-light-fonte);
+  color: var(--cor-light-font);
 }
 
 body.light .cabecalho-nav-links a:hover {
@@ -996,7 +1003,7 @@ body.light .cabecalho-nav-links a::after {
 body.light .apresentacao-links-github,
 body.light .apresentacao-links-linkedin,
 body.light .apresentacao-links-curriculo {
-  color: var(--cor-light-fonte);
+  color: var(--cor-light-font);
 }
 
 body.light .apresentacao-links-github img {
@@ -1022,7 +1029,7 @@ body.light .sobre-imagem {
 body.light .habilidades-frontend,
 body.light .habilidades-backend,
 body.light .habilidades-frameworks {
-  background-color: var(--cor-light-fundo-topicos);
+  background-color: var(--cor-light-topicos);
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -1038,7 +1045,7 @@ body.light .habilidades-backend ul li:last-child img {
 }
 
 body.light .projetos-div {
-  background-color: var(--cor-light-fundo-topicos);
+  background-color: var(--cor-light-topicos);
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -1048,7 +1055,7 @@ body.light .projetos-div-tecnologias span {
 }
 
 body.light .projetos-div-links a {
-  color: var(--cor-light-fonte);
+  color: var(--cor-light-font);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
@@ -1059,24 +1066,24 @@ body.light .projetos-div-links a:hover {
 }
 
 body.light .contato-form {
-  background-color: var(--cor-light-fundo-topicos);
+  background-color: var(--cor-light-topicos);
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
 }
 
 body.light .contato-form input,
 body.light .contato-form textarea {
-  color: var(--cor-light-fonte);
+  color: var(--cor-light-font);
 }
 
 body.light .contato-botao {
   color: var(--cor-light-background);
-  background-color: var(--cor-light-fonte);
+  background-color: var(--cor-light-font);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 body.light .contato-botao:hover {
   background-color: var(--cor-light-detalhes);
-  color: var(--cor-dark-fonte);
+  color: var(--cor-dark-font);
 }
 
 .apresentacao-div-nome,
