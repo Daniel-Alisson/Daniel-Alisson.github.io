@@ -831,35 +831,7 @@ ul li:last-child {
   align-items: center;
   border-top: 2px solid var(--cor-footer-borda);
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.4);
-  padding-top: 2rem;
-}
-
-.rodape-links {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 0.3rem;
-}
-
-.rodape-links ul {
-  margin: 15px;
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 10rem;
-  padding-bottom: 5rem;
-  flex-wrap: wrap;
-}
-
-.rodape-links ul li {
-  transition: 0.5s ease;
-}
-
-.rodape ul li a {
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none;
-  color: var(--font-rodape);
+  padding-top: 1.5rem;
 }
 
 .rodape-redes-sociais {
@@ -889,7 +861,7 @@ ul li:last-child {
 
 .rodape-redes-sociais a {
   color: var(--font-rodape);
-  margin-top: 30px;
+  margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 30px;
   margin-right: 30px;
@@ -913,26 +885,12 @@ ul li:last-child {
 }
 
 @media(max-width: 1114px) {
-  .rodape-links ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .rodape-links {
-    justify-content: center;
-  }
-
   .rodape-redes-sociais a {
     margin: 10px;
   }
   .rodape-links ul {
     padding-bottom: 10px;
   }
-}
-
-.rodape-links ul li:hover {
-  transform: scale(1.1);
-  font-weight: 500;
 }
 
 .rodape-redes-sociais a:hover {
@@ -990,6 +948,17 @@ ul li:last-child {
 }
 
 .indicador:hover {
+  background-color: var(--cor-dark-detalhes);
+}
+
+body.light .indicador {
+  transform: scale(0.9);
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+}
+
+body.light .indicador:hover {
   background-color: var(--cor-dark-detalhes);
 }
 

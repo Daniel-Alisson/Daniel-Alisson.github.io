@@ -78,6 +78,7 @@ class FormSubmit {
         body: JSON.stringify(this.getFormObject()),
       });
       this.displaySuccess();
+      this.form.reset();
     } catch (error) {
       this.displayError();
       throw new Error(error);
